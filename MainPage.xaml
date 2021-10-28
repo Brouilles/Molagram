@@ -104,6 +104,8 @@
                             <ComboBox Grid.Column="1" SelectedIndex="0">
                                 <x:String>g</x:String>
                                 <x:String>kg</x:String>
+                                <x:String>oz</x:String>
+                                <x:String>lb</x:String>
                             </ComboBox>
                         </Grid>
 
