@@ -15,7 +15,7 @@ namespace Molagram
         {
             this.InitializeComponent();
 
-            ApplicationView.PreferredLaunchViewSize = new Size(860, 360);
+            ApplicationView.PreferredLaunchViewSize = new Size(860, 350);
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
         }
     }
