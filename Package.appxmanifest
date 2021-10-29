@@ -7,15 +7,15 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="343fc673-9ea0-4d8c-a4ec-c1217c7fcf68"
-    Publisher="CN=gaeta"
-    Version="1.0.0.0" />
+    Name="62041DezeiraudGatan.Molagram"
+    Publisher="CN=800CCE0D-66E2-4A84-8527-0510570A1772"
+    Version="2.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="343fc673-9ea0-4d8c-a4ec-c1217c7fcf68" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="c09a7be9-cb7c-47a4-9559-55eb5f77cc98" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>Molagram</DisplayName>
-    <PublisherDisplayName>gaeta</PublisherDisplayName>
+    <PublisherDisplayName>Dezeiraud</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
@@ -42,8 +42,4 @@
       </uap:VisualElements>
     </Application>
   </Applications>
-
-  <Capabilities>
-    <Capability Name="internetClient" />
-  </Capabilities>
 </Package>
