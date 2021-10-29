@@ -27,6 +27,21 @@ namespace Molagram
         }
     }
 
+    public class StringNullOrEmptyToVisibilityConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, string language)
+        {
+            return string.IsNullOrEmpty(value as string)
+                ? Visibility.Collapsed : Visibility.Visible;
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, string language)
+        {
+            return string.IsNullOrEmpty(value as string)
+                ? Visibility.Collapsed : Visibility.Visible;
+        }
+    }
+
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>

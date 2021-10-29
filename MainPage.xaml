@@ -9,7 +9,8 @@
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls" xmlns:Common="using:Molagram.Common"
     muxc:BackdropMaterial.ApplyToRootOrPageBackground="True">
     <Page.Resources>
-        <local:DecimalConverter x:Key="decimalconverter"/>
+        <local:DecimalConverter x:Key="Decimalconverter" />
+        <local:StringNullOrEmptyToVisibilityConverter x:Key="StringNullOrEmptyToVisibilityConverter" />
     </Page.Resources>
     <Grid>
         <Grid.RowDefinitions>
@@ -105,13 +106,12 @@
                                       SelectionChanged="Units_SelectionChanged" />
                         </Grid>
 
-                        <!-- Visibility="{x:Bind Path=ViewModel.CurrentChemicalSpecies.Name, Mode=OneWay, Converter={StaticResource local:StringToVisibilityConverter}}" -->
                         <TextBlock x:Name="resultLabel" HorizontalAlignment="Left" VerticalAlignment="Top" 
-                                   Margin="0,12,0,0">
+                                   Margin="0,12,0,0" Visibility="{x:Bind Path=ViewModel.CurrentChemicalSpecies.Name, Mode=OneWay, Converter={StaticResource StringNullOrEmptyToVisibilityConverter}}">
                             <Run Text="1 mole of" />
                             <Run Text="{x:Bind Path=ViewModel.CurrentChemicalSpecies.Name, Mode=OneWay}" />
                             <Run Text="is" />
-                            <Run Text="{x:Bind Path=ViewModel.CurrentChemicalSpecies.MolarMass, Mode=OneWay, Converter={StaticResource decimalconverter}}" />
+                            <Run Text="{x:Bind Path=ViewModel.CurrentChemicalSpecies.MolarMass, Mode=OneWay, Converter={StaticResource Decimalconverter}}" />
                             <Run Text="g." />
                         </TextBlock>
                     </StackPanel>
