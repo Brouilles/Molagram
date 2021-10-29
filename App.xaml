@@ -9,6 +9,14 @@
             <ResourceDictionary.MergedDictionaries>
                 <XamlControlsResources  xmlns="using:Microsoft.UI.Xaml.Controls" />
             </ResourceDictionary.MergedDictionaries>
+            <ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary x:Key="Light">
+                    <ImageSource x:Key="Favicon">/Assets/Square44x44Logo-dark.scale-200.png</ImageSource>
+                </ResourceDictionary>
+                <ResourceDictionary x:Key="Dark">
+                    <ImageSource x:Key="Favicon">/Assets/Square44x44Logo.scale-200.png</ImageSource>
+                </ResourceDictionary>
+            </ResourceDictionary.ThemeDictionaries>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

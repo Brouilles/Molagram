@@ -35,7 +35,7 @@
                 <Image x:Name="AppFontIcon"
                     HorizontalAlignment="Left" 
                     VerticalAlignment="Center"
-                    Source="Assets/Square44x44Logo.png" 
+                    Source="{ThemeResource Favicon}" 
                     Width="24" 
                     Height="24"/>
                 <TextBlock x:Name="AppTitle"
