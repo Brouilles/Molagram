@@ -47,7 +47,7 @@
             </StackPanel>
         </Border>
         <CommandBar Grid.Row="0" Margin="30,40,12,0" Background="Transparent" IsOpen="False" DefaultLabelPosition="Right">
-            <AppBarButton Icon="Help" Label="About" Click="AboutButton_Click" />
+            <AppBarButton Icon="Help" x:Uid="About" Click="AboutButton_Click" />
         </CommandBar>
         <Grid Grid.Row="1">
             <Grid.RowDefinitions>
@@ -67,34 +67,34 @@
                 <muxc:Expander Grid.Column="0" Margin="30,0,15,0" IsExpanded="True" ExpandDirection="Down" 
                                HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch"
                                VerticalContentAlignment="Stretch" VerticalAlignment="Stretch" 
-                               Header="General">
+                               x:Uid="General">
                     <StackPanel>
-                        <ComboBox PlaceholderText="Choose a chemical species" Width="230" IsEditable="True" DisplayMemberPath="Name"
+                        <ComboBox x:Uid="ChooseComboBox" Width="230" IsEditable="True" DisplayMemberPath="Name"
                                   ItemsSource="{x:Bind Path=ViewModel.ChemicalSpecies, Mode=OneWay}"
                                   SelectionChanged="ChemicalSpecies_SelectionChanged" />
 
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Name of chemical species:" Style="{StaticResource TextBlockBefore}"/>
+                            <TextBlock x:Uid="SpeciesName" Style="{StaticResource TextBlockBefore}"/>
                             <TextBlock Text="{x:Bind Path=ViewModel.CurrentChemicalSpecies.Name, Mode=OneWay}" Margin="10,12,0,0" />
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Symbol of the chemical species:" Margin="0" />
+                            <TextBlock x:Uid="SpeciesSymbol" Margin="0" />
                             <TextBlock Text="{x:Bind Path=ViewModel.CurrentChemicalSpecies.Symbol, Mode=OneWay}" Margin="10,0,0,0" />
                         </StackPanel>
-                        <Button Style="{StaticResource AccentButtonStyle}" Click="WikipediaButton_Click"  Content="Open Wikipedia" Margin="0,12,0,0" />
+                        <Button x:Uid="OpenWikipedia" Style="{StaticResource AccentButtonStyle}" Click="WikipediaButton_Click" Margin="0,12,0,0" />
                     </StackPanel>
                 </muxc:Expander>
 
                 <muxc:Expander Grid.Column="1" Margin="15,0,30,0" IsExpanded="True" ExpandDirection="Down"
                                HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch"
                                VerticalContentAlignment="Stretch" VerticalAlignment="Stretch"  
-                               Header="Conversion">
+                               x:Uid="Conversion">
                     <StackPanel>
-                        <TextBlock Text="Mole:" />
+                        <TextBlock x:Uid="Mole" />
                         <muxc:NumberBox x:Name="moleTextBox" Value="{x:Bind ViewModel.Mole, Mode=TwoWay}" 
                                       Margin="0,0,6,0" AcceptsExpression="True" Minimum="0" />
                         
-                        <TextBlock Text="Weight:" Style="{StaticResource TextBlockBefore}" />
+                        <TextBlock x:Uid="Weight" Style="{StaticResource TextBlockBefore}" />
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*" />
@@ -108,9 +108,9 @@
 
                         <TextBlock x:Name="resultLabel" HorizontalAlignment="Left" VerticalAlignment="Top" 
                                    Margin="0,12,0,0" Visibility="{x:Bind Path=ViewModel.CurrentChemicalSpecies.Name, Mode=OneWay, Converter={StaticResource StringNullOrEmptyToVisibilityConverter}}">
-                            <Run Text="1 mole of" />
+                            <Run x:Uid="ResultLabel1" />
                             <Run Text="{x:Bind Path=ViewModel.CurrentChemicalSpecies.Name, Mode=OneWay}" />
-                            <Run Text="is" />
+                            <Run x:Uid="ResultLabel2" />
                             <Run Text="{x:Bind Path=ViewModel.CurrentChemicalSpecies.MolarMass, Mode=OneWay, Converter={StaticResource Decimalconverter}}" />
                             <Run Text="g." />
                         </TextBlock>

@@ -9,7 +9,7 @@
   <Identity
     Name="62041DezeiraudGatan.Molagram"
     Publisher="CN=800CCE0D-66E2-4A84-8527-0510570A1772"
-    Version="2.0.0.0" />
+    Version="2.1.0.0" />
 
   <mp:PhoneIdentity PhoneProductId="c09a7be9-cb7c-47a4-9559-55eb5f77cc98" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
@@ -35,7 +35,7 @@
         DisplayName="Molagram"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png"
-        Description="Molagram"
+        Description="Molagram is an application of conversion of atomic mass to moles/grams. It contains all the species of bases of the periodic table."
         BackgroundColor="transparent">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />

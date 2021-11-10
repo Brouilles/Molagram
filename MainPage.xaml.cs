@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.IO;
-using System.Linq;
+using Windows.ApplicationModel.Resources;
 using Windows.Foundation;
-using Windows.UI.Popups;
 using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -49,6 +45,8 @@ namespace Molagram
     {
         public DataModel ViewModel { get; set; }
 
+        private ResourceLoader m_resourceLoader;
+
         public MainPage()
         {
             this.InitializeComponent();
@@ -57,16 +55,17 @@ namespace Molagram
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
 
             this.ViewModel = new DataModel();
+            m_resourceLoader = ResourceLoader.GetForCurrentView();
         }
 
         // Events
-        private async void AboutButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        private async void AboutButton_Click(object sender, RoutedEventArgs e)
         {
             ContentDialog dialog = new ContentDialog()
             {
-                Title = "About",
+                Title = m_resourceLoader.GetString("About/Label"),
                 Content = "Molagram - Copyright © 2021 Dezeiraud Gaëtan (gaetan.dezeiraud.com), Chloé Vinour, Honorine Claudot. All rights reserved.",
-                CloseButtonText = "Ok"
+                CloseButtonText = m_resourceLoader.GetString("Ok"),
             };
 
             await dialog.ShowAsync();
@@ -98,7 +97,7 @@ namespace Molagram
             }
         }
 
-        private void WikipediaButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        private void WikipediaButton_Click(object sender, RoutedEventArgs e)
         {
             if (this.ViewModel.CurrentChemicalSpecies.URL != null)
             {

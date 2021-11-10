@@ -1,13 +1,8 @@
 ﻿using Molagram.Common;
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
 using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Globalization;
 using Windows.UI.Xaml.Controls;
 
 namespace Molagram
@@ -141,7 +136,7 @@ namespace Molagram
                     {
                         Name = lineParams[0],
                         Symbol = lineParams[1],
-                        MolarMass = double.Parse(lineParams[2]),
+                        MolarMass = double.Parse(lineParams[2], CultureInfo.InvariantCulture),
                         URL = lineParams[3]
                     });
                 }
