@@ -1,23 +1,41 @@
 ﻿using Molagram.Common;
+using Molagram.Utilities;
 using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Globalization;
+using System.IO;
+using System.Linq;
+using System.Runtime.Serialization;
+using Windows.Storage;
 using Windows.UI.Xaml.Controls;
 
 namespace Molagram
 {
+    [DataContract]
     public struct Species
     {
+        [DataMember]
         public string Name { get; set; }
+        [DataMember]
         public string Symbol { get; set; }
+        [DataMember]
         public double MolarMass { get; set; }
+        [DataMember]
         public string URL { get; set; }
     };
 
+    [DataContract]
+    public class SpeciesDataList
+    {
+        [DataMember]
+        public List<Species> ChemicalSpecies { get; set; }
+    }
+
     public class DataModel : ViewModelBase
     {
-        private readonly string m_filePath = "ChemicalSpecies.ini";
+        private readonly string m_filePath = "ChemicalSpecies.xml";
 
         // CurrentChemicalSpecies
         private Species m_currentChemicalSpecies;
@@ -116,6 +134,7 @@ namespace Molagram
             m_weight = 0.0;
 
             // Units
+            m_units.Clear();
             m_units.Add("g");
             m_units.Add("kg");
             m_units.Add("oz");
@@ -126,19 +145,11 @@ namespace Molagram
             // Load species from file
             try
             {
-                var folder = Windows.ApplicationModel.Package.Current.InstalledLocation;
-                var file = await folder.GetFileAsync(m_filePath);
-                var readFile = await Windows.Storage.FileIO.ReadLinesAsync(file);
-                foreach (var line in readFile)
+                m_chemicalSpecies.Clear();
+                var species = await Serializer.FromFile<SpeciesDataList>(m_filePath);
+                foreach (var item in species.ChemicalSpecies)
                 {
-                    string[] lineParams = line.Split(' ');
-                    m_chemicalSpecies.Add(new Species
-                    {
-                        Name = lineParams[0],
-                        Symbol = lineParams[1],
-                        MolarMass = double.Parse(lineParams[2], CultureInfo.InvariantCulture),
-                        URL = lineParams[3]
-                    });
+                    m_chemicalSpecies.Add(item);
                 }
             }
             catch (Exception ex)
