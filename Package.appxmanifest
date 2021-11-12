@@ -9,7 +9,7 @@
   <Identity
     Name="62041DezeiraudGatan.Molagram"
     Publisher="CN=800CCE0D-66E2-4A84-8527-0510570A1772"
-    Version="2.1.0.0" />
+    Version="2.2.0.0" />
 
   <mp:PhoneIdentity PhoneProductId="c09a7be9-cb7c-47a4-9559-55eb5f77cc98" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
