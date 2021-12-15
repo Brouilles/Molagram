@@ -155,14 +155,6 @@ namespace MolagramWindowsAppSDK
             catch (Exception ex)
             {
                 Debug.WriteLine(ex.Message);
-
-                ContentDialog dialog = new ContentDialog()
-                {
-                    Title = "Error",
-                    Content = "Can't load the 'ChemicalSpecies.ini' file.",
-                    CloseButtonText = "Ok"
-                };
-                await dialog.ShowAsync();
             }
         }
 
