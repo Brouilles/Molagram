@@ -368,37 +368,23 @@
   </ProductReservedInfo>
   <AccountPackageIdentityNames>
     <MainPackageIdentityName>62041DezeiraudGatan.Boisseuil</MainPackageIdentityName>
+    <MainPackageIdentityName>62041DezeiraudGatan.CrazyCity</MainPackageIdentityName>
     <MainPackageIdentityName>62041DezeiraudGatan.Creaboutique</MainPackageIdentityName>
     <MainPackageIdentityName>62041DezeiraudGatan.DezeiraudHub</MainPackageIdentityName>
-    <MainPackageIdentityName>62041DezeiraudGatan.DezeiraudPlay</MainPackageIdentityName>
+    <MainPackageIdentityName>62041DezeiraudGatan.FileOptimizer</MainPackageIdentityName>
     <MainPackageIdentityName>62041DezeiraudGatan.GamersAddictHUB</MainPackageIdentityName>
     <MainPackageIdentityName>62041DezeiraudGatan.Halo.fr-NonOfficiel</MainPackageIdentityName>
+    <MainPackageIdentityName>62041DezeiraudGatan.LootboxFactory</MainPackageIdentityName>
     <MainPackageIdentityName>62041DezeiraudGatan.MaComptaAuto-Entrepreneur</MainPackageIdentityName>
     <MainPackageIdentityName>62041DezeiraudGatan.OxemQuest</MainPackageIdentityName>
     <MainPackageIdentityName>62041DezeiraudGatan.Paug</MainPackageIdentityName>
+    <MainPackageIdentityName>62041DezeiraudGatan.PaugLegacy</MainPackageIdentityName>
     <MainPackageIdentityName>62041DezeiraudGatan.Scraffy</MainPackageIdentityName>
     <MainPackageIdentityName>62041DezeiraudGatan.SeaofDreams</MainPackageIdentityName>
     <MainPackageIdentityName>62041DezeiraudGatan.53367516F9854</MainPackageIdentityName>
+    <MainPackageIdentityName>62041DezeiraudGatan.TouchtheColor-thegame</MainPackageIdentityName>
     <MainPackageIdentityName>62041DezeiraudGatan.TouchtheColor2</MainPackageIdentityName>
     <MainPackageIdentityName>62041DezeiraudGatan.WordOrder</MainPackageIdentityName>
   </AccountPackageIdentityNames>
-  <PackageInfoList LandingUrl="https://developer.microsoft.com/dashboard/Application?appId=9NBLGGGZPG36">
-    <PackageInfo>
-      <OsMinVersion>0.0.0.0</OsMinVersion>
-      <PackageArchitecture>Neutral</PackageArchitecture>
-      <PackageMaxArchitectureVersion>1.3.6.0</PackageMaxArchitectureVersion>
-    </PackageInfo>
-    <BundleInfo>
-      <PackageInfo>
-        <OsMinVersion>0.0.0.0</OsMinVersion>
-        <PackageArchitecture>X86</PackageArchitecture>
-        <PackageMaxArchitectureVersion>1.3.7.0</PackageMaxArchitectureVersion>
-      </PackageInfo>
-      <PackageInfo>
-        <OsMinVersion>0.0.0.0</OsMinVersion>
-        <PackageArchitecture>X64</PackageArchitecture>
-        <PackageMaxArchitectureVersion>1.3.7.0</PackageMaxArchitectureVersion>
-      </PackageInfo>
-    </BundleInfo>
-  </PackageInfoList>
+  <PackageInfoList LandingUrl="https://developer.microsoft.com/dashboard/Application?appId=9NBLGGGZPG36" />
 </StoreAssociation>
