@@ -1,9 +1,4 @@
-> 🟡 **Project status**: maintenance mode
-  - Project is no longer in active development
-  - Only bug-related issues are accepted
-  - Only bug-related pull requests are accepted
-  - New features are unlikely to be added
-  - Project status may eventually transition to "discontinued" or back to "active"
+[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
 
 # Molagram
 
